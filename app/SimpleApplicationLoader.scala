@@ -7,6 +7,8 @@ import router.Routes
 
 class SimpleApplicationLoader extends ApplicationLoader {
   def load(context: Context) = {
+    //logback activation
+    Logger.configure(context.environment)
     new ApplicationComponents(context).application
   }
 }
